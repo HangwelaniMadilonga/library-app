@@ -1,63 +1,101 @@
-*{
-    margin: 0;
-    padding: 0;
-    background-color: cadetblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  background-color: cadetblue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-p{
-    color: beige;
+p {
+  color: beige;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-#title-text{
+#title-text {
+  margin-top: 6rem;
+  font-size: 4rem;
+  font-style: italic;
+}
+
+#title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form {
+  display: flex;
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: beige;
+}
+
+.buttons {
+  cursor: pointer;
+  font-weight: 100;
+  color: beige;
+  background-color: grey;
+  padding: 7px;
+  width: 10rem;
+}
+
+#submit-button {
+  margin-top: 2rem;
+  margin-left: 23rem;
+  margin-right: 0.2rem;
+}
+
+#pages {
+  width: 4rem;
+}
+
+#read-status {
+  height: 1.5rem;
+  width: 7rem;
+  padding-left: 15px;
+  font-size: large;
+  
+}
+
+/* #read-status{
     
-    margin-top: 6rem;
-    font-size: 4rem;
-    font-style: italic;
-}
-
-#title-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#form{
-    display: flex;
-    margin-top: 5rem;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    color: beige;
-}
-
-.buttons{
-    cursor: pointer;
-    font-weight: 100;
-    color: beige;
-    border-radius: 40px;
-    background-color: grey;
-    padding: 7px;
     
+} */
+
+#option-1 {
+  color: rgb(226 233 231);
+  
 }
 
-#submit-button{
-    margin-top: 2rem;
-    margin-left: 35rem;
-    
+#option-2 {
+  color: rgb(226 233 231);
 }
 
-#reset-button{
-
+#pages {
+  color: rgb(226 233 231);
+  padding-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-size: large;
 }
-#pages{
-    width: 2rem;
-    
+#author {
+  color: rgb(226 233 231);
+  padding-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 5px;
+  font-size: large;
+  /* padding-left: 40px; */
+}
+#title {
+  color: rgb(226 233 231);
+  padding-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 5px;
+  font-size: large;
+  /* padding-left: 40px; */
 }
 

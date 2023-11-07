@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="title-container"><p id="title-text">The Odin Library</p></div>
     <div id="input-form-container">
-        <form action="">
-            <div id="form">
-            <div>
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" required>
-            </div>
-            <div>
-                <label for="author">Author</label>
-                <input type="text" name="author" id="author" required>
-            </div>
-            <div>
-                <label for="pages">Number of pages</label>
-                <input type="number" name="pages" id="pages" min="1" required>
-            </div>
+      <form action="">
+        <div id="form">
+          <div class="form-content-conatiner">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required />
+          </div>
+          <div>
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" required />
+          </div>
+          <div>
+            <label for="read-status" id="status-label">Read Status</label>
+            <select name="read-status" id="read-status" multiple>
+              <option value="Read" id="option-1">Read</option>
+              <option  value="Not Read" id="option-2">Not Read</option>
+            </select>
+          </div>
 
-            <div>
-                <label for="status">Number of pages</label>
-                <input type="number" name="pages" id="pages" min="1" required>
-            </div>
-            
-            </div>
-            <div><button type="submit" id="submit-button" class="buttons">Submit</button>
-                <button type="reset" id="reset-button" class="buttons">Reset</button></div>
-        </form>
-        
+          <div>
+            <label for="status">Number of pages</label>
+            <input type="number" name="pages" id="pages" min="1" required />
+          </div>
+        </div>
+        <div>
+          <button type="submit" id="submit-button" class="buttons">
+            Submit
+          </button>
+          <button type="reset" id="reset-button" class="buttons">Reset</button>
+        </div>
+      </form>
     </div>
-    
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
