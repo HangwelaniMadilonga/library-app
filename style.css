@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    color: beige;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#title-text{
+    
+    margin-top: 6rem;
+    font-size: 4rem;
+    font-style: italic;
+}
+
+#title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form{
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: beige;
+}
+
+.buttons{
+    cursor: pointer;
+    font-weight: 100;
+    color: beige;
+    border-radius: 40px;
+    background-color: grey;
+    padding: 7px;
+    
+}
+
+#submit-button{
+    margin-top: 2rem;
+    margin-left: 35rem;
+    
+}
+
+#reset-button{
+
+}
+#pages{
+    width: 2rem;
+    
+}
+
