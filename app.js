@@ -1,20 +1,24 @@
 const myLibrary = [];
+let formInfo = document.querySelector('form');
 
-function Book(title, author,totalPages,isRead) {
+function Book(title, author,readStatus,totalPages) {
     this.title = title;
     this.author = author;
+    this.readStatus = readStatus;
     this.totalPages = totalPages;
-    this.isRead = false;
-    this.info = function() {
-      
-    };
+    
   }
-  
-while(isRunning){
-    let userInput = prompt("Enter an item or press enter to finish:");
-}
 
-  const player1 = new Player('steve', 'X');
-  const player2 = new Player('also steve', 'O');
-  player1.sayName(); 
-  player2.sayName(); 
+formInfo.addEventListener('submit', (e) => {
+ e.preventDefault();
+ let title = document.querySelector('title').value;
+ let author = document.querySelector('author').value;
+ let totalPages = document.querySelector('read-status').value;
+ let readStatus = document.querySelector('pages').value;
+
+
+})
+
+
+  
+
