@@ -39,7 +39,7 @@ body {
   cursor: pointer;
   font-weight: 100;
   color: rgb(59, 59, 53);
-  background-color: grey;
+  background-color: rgb(226 233 231);
   padding: 7px;
   width: 10rem;
 }
