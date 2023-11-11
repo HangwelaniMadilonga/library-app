@@ -9,6 +9,10 @@ function Book(title, author,readStatus,totalPages) {
     
   }
 
+let displayBook = (newBook) => {
+    
+}
+
 formInfo.addEventListener('submit', (e) => {
  e.preventDefault();
  let title = document.querySelector('#title').value;

@@ -9,6 +9,18 @@ p {
   color: beige;
 }
 
+th{
+  color: beige;
+  border-bottom: 3px solid grey; ;
+}
+td{
+  color: white;
+}
+table th td{
+  border-collapse: collapse;
+  
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -103,4 +115,20 @@ body {
   background-color: rgb(226 233 231);
   /* padding-left: 40px; */
 }
+
+.normal-text{
+  font-size: large;
+  margin : 0 6rem;
+}
+
+#saved-book-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* .table-heading{
+ 
+} */
 
