@@ -11,14 +11,24 @@ p {
 
 th{
   color: beige;
-  border-bottom: 3px solid grey; ;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+thead tr{
+  border-bottom: 2px solid black;
 }
 td{
   color: white;
+  text-align: left;
+  margin-top: 20rem;
 }
 table th td{
-  border-collapse: collapse;
+  border-collapse: separate;
   
+}
+table{
+  width: 70%;
+  margin-left: 20rem;
 }
 
 body {
@@ -132,3 +142,6 @@ body {
  
 } */
 
+/* #table-header{
+  border-bottom: 3px solid grey;
+} */
