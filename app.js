@@ -1,6 +1,6 @@
 const myLibrary = [];
-let formInfo = document.querySelector('form');
-
+let formInfo = document.querySelector('#form');
+let tableBody = document.querySelector('#table-body');
 function Book(title, author,readStatus,totalPages) {
     this.title = title;
     this.author = author;
@@ -9,8 +9,28 @@ function Book(title, author,readStatus,totalPages) {
     
   }
 
-let displayBook = (newBook) => {
-    
+let displayLibrary= () => {
+    while (tableBody.firstChild) {
+        tableBody.removeChild(tableBody.firstChild);
+      }
+      myLibrary.forEach(book => {
+        const row = tableBody.insertRow();
+        Object.values(book).forEach(info => {
+            if(info === "Read" || info === "Not Read"){
+                const cell = row.insertCell();
+                cell.classList.add('table-heading');
+                const readButton = document.createElement('button');
+                readButton.textContent = info;
+                cell.appendChild(readButton);
+            }
+            else{
+                const cell = row.insertCell();
+                cell.classList.add('table-heading');
+                cell.textContent = info;
+            }
+            
+        })
+      })   
 }
 
 formInfo.addEventListener('submit', (e) => {
@@ -22,7 +42,7 @@ formInfo.addEventListener('submit', (e) => {
 
  const newBook = new Book(title, author, readStatus, totalPages);
  myLibrary.push(newBook);
-
+ displayLibrary();
  formInfo.reset();
 })
 
