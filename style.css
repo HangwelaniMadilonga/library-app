@@ -12,23 +12,23 @@ p {
 th{
   color: beige;
   text-align: left;
-  margin-bottom: 4rem;
+  border-bottom: 1px solid #E1E1E1;
+ 
 }
 thead tr{
-  border-bottom: 2px solid black;
+  border-bottom: 8px solid black;
 }
 td{
   color: white;
   text-align: left;
-  margin-top: 20rem;
+  padding-top: 2rem;
 }
-table th td{
-  border-collapse: separate;
-  
-}
+
 table{
   width: 76%;
   margin-left: 20rem;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 body {
