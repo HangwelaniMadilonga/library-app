@@ -13,20 +13,22 @@ th{
   color: beige;
   text-align: left;
   border-bottom: 1px solid #E1E1E1;
+  width: fit-content;
  
 }
-thead tr{
-  border-bottom: 8px solid black;
-}
+
 td{
   color: white;
   text-align: left;
-  padding-top: 2rem;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid grey;
+  width: 2rem;
 }
 
 table{
   width: 76%;
-  margin-left: 20rem;
+  margin-left: 8rem;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -46,6 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: fit-content;
 }
 
 #fill-in-section {
@@ -55,6 +58,11 @@ body {
   justify-content: center;
   gap: 2rem;
   color: beige;
+  min-width: fit-content;
+}
+
+#input-form-container{
+width: 100%;
 }
 
 .buttons {
@@ -64,12 +72,14 @@ body {
   background-color: rgb(226 233 231);
   padding: 7px;
   width: 10rem;
+  width: 10%;
 }
 
 #submit-button {
   margin-top: 2rem;
   margin-left: 23rem;
   margin-right: 0.2rem;
+
 }
 
 #pages {
@@ -138,10 +148,3 @@ body {
   margin-top: 3rem;
 }
 
-/* .table-heading{
- 
-} */
-
-/* #table-header{
-  border-bottom: 3px solid grey;
-} */
