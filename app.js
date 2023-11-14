@@ -11,6 +11,7 @@ function Book(title, author,readStatus,totalPages) {
   }
 
 let displayLibrary= () => {
+    //Restart display process everytime 
     while (tableBody.firstChild) {
         tableBody.removeChild(tableBody.firstChild);
         bookTrack = 0;
@@ -44,12 +45,24 @@ let displayLibrary= () => {
                 cell.classList.add('table-heading');
                 cell.textContent = info;
             }
+        
             
         })
-    bookTrack = bookTrack + 1; 
+                bookTrack = bookTrack + 1; 
+                const cell = row.insertCell();
+                cell.classList.add('table-heading');
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = "Delete";
+                deleteButton.classList.add('delete-button');
+                cell.appendChild(deleteButton);
+                deleteButton.addEventListener('click',function(){
+                myLibrary.splice(parseInt(row.dataset.newAttribute, 10),1);
+                row.remove();   
+                displayLibrary();
+                })
     })   
 }
-
+//submit form and add it to the array to give data for display
 formInfo.addEventListener('submit', (e) => {
  e.preventDefault();
  let title = document.querySelector('#title').value;

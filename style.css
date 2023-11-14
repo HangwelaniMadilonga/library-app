@@ -156,3 +156,12 @@ width: 100%;
   padding: 7px;
   width: 6rem;
 }
+
+.delete-button{
+  cursor: pointer;
+  font-weight: 100;
+  color: rgb(236, 226, 226);
+  background-color: rgb(153, 38, 38);
+  padding: 7px;
+  width: 6rem;
+}
