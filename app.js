@@ -17,6 +17,7 @@ let displayLibrary= () => {
         const row = tableBody.insertRow();
         Object.values(book).forEach(info => {
             if(info === "Read" || info === "Not Read"){
+                console.log("Read or not read");
                 const cell = row.insertCell();
                 cell.classList.add('table-heading');
                 const readButton = document.createElement('button');
