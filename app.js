@@ -22,7 +22,7 @@ let displayLibrary= () => {
         Object.values(book).forEach(info => {
             if(info === "Read" || info === "Not Read"){
                 const cell = row.insertCell();
-                cell.classList.add('table-heading');
+                cell.classList.add('table-element');
                 const readButton = document.createElement('button');
                 readButton.textContent = info;
                 readButton.classList.add('read-button');
@@ -42,7 +42,7 @@ let displayLibrary= () => {
             
             else{
                 const cell = row.insertCell();
-                cell.classList.add('table-heading');
+                cell.classList.add('table-element');
                 cell.textContent = info;
             }
         
