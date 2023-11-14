@@ -72,7 +72,7 @@ width: 100%;
   background-color: rgb(226 233 231);
   padding: 7px;
   width: 10rem;
-  width: 10%;
+ 
 }
 
 #submit-button {
@@ -148,3 +148,11 @@ width: 100%;
   margin-top: 3rem;
 }
 
+.read-button{
+  cursor: pointer;
+  font-weight: 100;
+  color: rgb(59, 59, 53);
+  background-color: rgb(226 233 231);
+  padding: 7px;
+  width: 6rem;
+}

@@ -17,13 +17,23 @@ let displayLibrary= () => {
         const row = tableBody.insertRow();
         Object.values(book).forEach(info => {
             if(info === "Read" || info === "Not Read"){
-                console.log("Read or not read");
                 const cell = row.insertCell();
                 cell.classList.add('table-heading');
                 const readButton = document.createElement('button');
                 readButton.textContent = info;
+                readButton.classList.add('read-button');
                 cell.appendChild(readButton);
-            }
+                    readButton.addEventListener('click',function(){
+                        if(readButton.textContent === "Read"){
+                            readButton.textContent = "Not Read";
+                        }
+                
+                        else if(readButton.textContent === "Not Read"){
+                            readButton.textContent = "Read";
+                        }
+                    })
+                }
+            
             else{
                 const cell = row.insertCell();
                 cell.classList.add('table-heading');
