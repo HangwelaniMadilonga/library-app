@@ -29,10 +29,12 @@ let displayLibrary= () => {
                     readButton.addEventListener('click',function(){
                         if(readButton.textContent === "Read"){
                             readButton.textContent = "Not Read";
+                            myLibrary[ row.dataset.newAttribute].readStatus = "Not Read"
                         }
                 
                         else if(readButton.textContent === "Not Read"){
                             readButton.textContent = "Read";
+                            myLibrary[ row.dataset.newAttribute].readStatus = "Read"
                         }
                     })
                 }
