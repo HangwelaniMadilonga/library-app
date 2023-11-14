@@ -1,4 +1,5 @@
 const myLibrary = [];
+let bookTrack = 0;
 let formInfo = document.querySelector('#form');
 let tableBody = document.querySelector('#table-body');
 function Book(title, author,readStatus,totalPages) {
@@ -12,9 +13,11 @@ function Book(title, author,readStatus,totalPages) {
 let displayLibrary= () => {
     while (tableBody.firstChild) {
         tableBody.removeChild(tableBody.firstChild);
+        bookTrack = 0;
       }
       myLibrary.forEach(book => {
         const row = tableBody.insertRow();
+        row.dataset.newAttribute = bookTrack.toString();
         Object.values(book).forEach(info => {
             if(info === "Read" || info === "Not Read"){
                 const cell = row.insertCell();
@@ -41,7 +44,8 @@ let displayLibrary= () => {
             }
             
         })
-      })   
+    bookTrack = bookTrack + 1; 
+    })   
 }
 
 formInfo.addEventListener('submit', (e) => {
