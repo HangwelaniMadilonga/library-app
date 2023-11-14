@@ -165,3 +165,12 @@ width: 100%;
   padding: 7px;
   width: 6rem;
 }
+.delete-cell{
+  color: white;
+  text-align: right;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  width: 2rem;
+  border-bottom-width: 0px;
+  
+}

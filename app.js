@@ -50,10 +50,10 @@ let displayLibrary= () => {
         })
                 bookTrack = bookTrack + 1; 
                 const cell = row.insertCell();
-                cell.classList.add('table-heading');
+                cell.classList.add('delete-cell');
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = "Delete";
-                deleteButton.classList.add('delete-button');
+                deleteButton.classList.add("delete-button");
                 cell.appendChild(deleteButton);
                 deleteButton.addEventListener('click',function(){
                 myLibrary.splice(parseInt(row.dataset.newAttribute, 10),1);
