@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 let bookTrack = 0;
 let formInfo = document.querySelector('#form');
 let tableBody = document.querySelector('#table-body');
@@ -9,6 +9,12 @@ function Book(title, author,readStatus,totalPages) {
     this.totalPages = totalPages;
     
   }
+  document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('myLibrary')) {
+        myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+    }
+    displayLibrary();
+});
 
 let displayLibrary= () => {
     //Restart display process everytime 
@@ -30,12 +36,14 @@ let displayLibrary= () => {
                     readButton.addEventListener('click',function(){
                         if(readButton.textContent === "Read"){
                             readButton.textContent = "Not Read";
-                            myLibrary[ row.dataset.newAttribute].readStatus = "Not Read"
+                            myLibrary[ row.dataset.newAttribute].readStatus = "Not Read";
+                            localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
                         }
                 
                         else if(readButton.textContent === "Not Read"){
                             readButton.textContent = "Read";
-                            myLibrary[ row.dataset.newAttribute].readStatus = "Read"
+                            myLibrary[ row.dataset.newAttribute].readStatus = "Read";
+                            localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
                         }
                     })
                 }
@@ -59,6 +67,7 @@ let displayLibrary= () => {
                 myLibrary.splice(parseInt(row.dataset.newAttribute, 10),1);
                 row.remove();   
                 displayLibrary();
+                localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
                 })
     })   
 }
@@ -74,6 +83,7 @@ formInfo.addEventListener('submit', (e) => {
  myLibrary.push(newBook);
  displayLibrary();
  formInfo.reset();
+ localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 })
 
 
