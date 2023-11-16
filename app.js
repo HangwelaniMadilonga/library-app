@@ -20,8 +20,9 @@ let displayLibrary= () => {
     //Restart display process everytime 
     while (tableBody.firstChild) {
         tableBody.removeChild(tableBody.firstChild);
-        bookTrack = 0;
+        
       }
+      bookTrack = 0;
       myLibrary.forEach(book => {
         const row = tableBody.insertRow();
         row.dataset.newAttribute = bookTrack.toString();
