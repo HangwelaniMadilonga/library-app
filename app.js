@@ -66,8 +66,9 @@ let displayLibrary= () => {
                 deleteButton.addEventListener('click',function(){
                 myLibrary.splice(parseInt(row.dataset.newAttribute, 10),1);
                 row.remove();   
-                displayLibrary();
+                
                 localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+                displayLibrary();
                 })
     })   
 }
